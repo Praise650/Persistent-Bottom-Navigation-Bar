@@ -49,11 +49,13 @@ class DIYNavigationBarState extends State<DIYNavigationBar> {
         return isFirstRouteInCurrentTab;
       },
       child: Scaffold(
-        body: Stack(children: <Widget>[
-          _buildOffstageNavigator("Page1"),
-          _buildOffstageNavigator("Page2"),
-          _buildOffstageNavigator("Page3"),
-        ]),
+        body: Stack(
+          children: <Widget>[
+            _buildOffstageNavigator("Page1"),
+            _buildOffstageNavigator("Page2"),
+            _buildOffstageNavigator("Page3"),
+          ],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.blueAccent,
           onTap: (int index) {
